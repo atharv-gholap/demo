@@ -1,4 +1,4 @@
 hello DevOps
 now the is edited 😁
-3 line is edited on github 
-new feature added
+3 line is edited on github
+new line added through CLI 
