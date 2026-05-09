@@ -7,7 +7,7 @@ on:
 
 jobs:
   ci-job:
-    runs-on: ubuntu-latest
+    runs-on: prod
 
     steps:
       - name:  copy code to github hosted runner
@@ -33,7 +33,7 @@ jobs:
 
   deployment:
     needs:  ci-job
-    runs-on:  ubuntu-latest
+    runs-on:  self-hosted
 
     steps:  
       - name:  Download artifacts
