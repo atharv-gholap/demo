@@ -1,9 +1,13 @@
 name: CI-CD Pipeline
 
-on:  
+on:  workflow_dispatch
+
   # triggers the workflow on push or pull request
-  push:
-    branches: [ "main" ]
+permissions: 
+  contents: read
+  packages: write
+  pull-requests: write
+  actions: read
 
 jobs:
   ci-job:
