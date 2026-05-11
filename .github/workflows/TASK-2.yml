@@ -1,4 +1,4 @@
-name:  MULTI STEP WORKFLOW
+name:  TASK-2 MULTI STEP WORKFLOW
 
 on:  
   push:
