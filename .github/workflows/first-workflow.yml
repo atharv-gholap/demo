@@ -1,4 +1,4 @@
-name:  first workflow
+name:  TASK-1 first workflow
 
 on:  
    workflow_dispatch:
