@@ -1,1 +1,21 @@
-#h
+name:  TASK 5 Deploy Website
+on:  
+  push:
+    branches: 
+      - main
+
+
+jobs:
+  deploy:
+    runs-on:  ubuntu-latest
+
+    steps:
+      - name:  download repo
+        uses:  actions/checkout@v4
+
+      - name:  
+        uses:  
+        with:
+
+      - name:
+        run:  
