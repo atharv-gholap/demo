@@ -1,4 +1,4 @@
-name:  TASK 5 Deploy Website
+name:  TASK-5 Deploy Website
 on:  
   push:
     branches: 
