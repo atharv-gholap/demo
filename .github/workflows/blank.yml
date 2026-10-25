@@ -45,7 +45,7 @@ jobs:
 
 
       - name: deploy files to s3 bucket
-        uses: aws s3 sync . s3://actions-demo-1
+        run: aws s3 sync . s3://actions-demo-1
       
 
 
