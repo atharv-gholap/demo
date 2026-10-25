@@ -1,7 +1,6 @@
 name: s3
 on: 
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
 jobs: 
   ci-jobs:
     runs-on: ubuntu-latest
