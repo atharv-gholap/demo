@@ -23,7 +23,7 @@ jobs:
       - name: uploading index.html as artifacts
         uses: actions/upload-artifact@v4
         with: 
-          name: websit-file
+          name: website-file
           path:  |
             index.html
 
