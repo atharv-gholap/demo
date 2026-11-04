@@ -1,0 +1,19 @@
+name: Second-workflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo-jobs: 
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: print current directory
+        run: pwd
+      - name: list all the files
+        run: ls
+      - name: print current date
+        run: date
