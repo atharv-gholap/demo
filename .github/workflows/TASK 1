@@ -1,0 +1,14 @@
+name:  first-workflow
+
+on:  
+  push:  
+    branches:
+      - main
+            
+
+jobs:  
+  print hello world:
+    runs-on:  ubuntu-latest
+    steps:  
+      - name:  print hello world
+        run: echo " hello devops batch"
