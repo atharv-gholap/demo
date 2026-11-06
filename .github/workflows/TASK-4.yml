@@ -37,7 +37,7 @@ jobs:
       - name: download the html file
         uses: actions/download-artifact@v4
         with:
-          name: hmtl-file
+          name: html-file
 
       - name: list the file
         run: ls
