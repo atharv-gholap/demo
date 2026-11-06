@@ -1,0 +1,53 @@
+name: practice4-yml
+on:
+  push:
+    branches: 
+      - main
+jobs:
+  uploading:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: copying the repo
+        uses: actions/checkout@v4
+
+      - name: listing all the files
+        run: ls
+      - name: verify wheteher the html file exist or not
+        run: |
+          if [ ! -f index.html ]; then echo "file is not available"
+            exit 1
+          fi
+      - name: upload the file
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-file
+          path: |
+            index.html
+
+  downloading:
+    needs: uploading
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: download the artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: html-file
+
+      - name: check the files
+        run: ls -la
+
+
+
+
+
+
+
+
+      
+
+      
+       
+
+      
