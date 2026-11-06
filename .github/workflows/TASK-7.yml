@@ -1,0 +1,33 @@
+
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display validation message
+        run: echo "Pull Request validation started"
+
+      - name: Check HTML file
+        run: |
+          if [ ! -f index.html ]; then
+            echo "index.html not found"
+            exit 1
+          fi
+          echo "index.html found successfully"
+
+      - name: Validation successful
+        run: echo "All PR validation checks passed"
