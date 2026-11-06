@@ -1,0 +1,74 @@
+name: 4-workflow
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  upload_file:
+    runs-on: ubuntu-latest
+
+    steps:
+
+
+      - name: listing all the files
+        run: |
+          echo "list all the files"
+          ls
+          
+      - name: verify that the html file exist or not
+        run: |
+          if [ ! -f index.html ]; then echo "index.html not available"
+            exit 1
+          fi
+          
+      - name: uploading the HTML file
+        uses: actions/upload-artifact@v4
+
+        with:
+          name: html-file
+          path: |
+            index.html
+
+  download-file:
+    needs: upload-file
+    runs-on: ubuntu-latest
+
+      steps:
+
+      
+        - name: download the html file
+          uses: actions/download-artifact@v4
+          with:
+            name: hmtl-file
+
+        - name: list the file
+          run: ls
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
