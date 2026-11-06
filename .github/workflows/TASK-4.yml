@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      - name: copying the repo
+        uses: actions/checkout@v4
 
       - name: listing all the files
         run: |
